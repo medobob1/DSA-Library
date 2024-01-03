@@ -1,19 +1,20 @@
 #include <vector>
+#include <stdexcept>
 
-class Stack
+class Queue 
 {
 private:
     unsigned int size = 0;
-    std::vector<int>arr;
+    std::vector<int> arr;
 
 public:
-    void push(int data)
+    void enqueue(int data)
     {
-        arr.insert(arr.begin(), data);
+        arr.push_back(data);
         size++;
     }
 
-    void pop()
+    void dequeue()
     {
         if (size == 1 || size == 0)
         {
@@ -30,7 +31,7 @@ public:
         arr.clear();
     }
 
-    int peek()
+    int front()
     {
         if (isEmpty())
         {
@@ -50,7 +51,7 @@ public:
         return arr.empty();
     }
 
-    std::vector<int> getStack()
+    std::vector<int> getQueue()
     {
         return arr;
     }

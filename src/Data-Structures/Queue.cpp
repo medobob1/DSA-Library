@@ -35,7 +35,7 @@ public:
     {
         if (isEmpty())
         {
-            throw std::runtime_error("Stack is empty");
+            throw std::runtime_error("Queue is empty");
         }
         
         return arr[0];
